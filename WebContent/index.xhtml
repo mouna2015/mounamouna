@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head></h:head>
+	<body>
+	
+       
+        <h:form>
+            <h:panelGrid columns="2">
+                Person ID to Delete: <h:inputText value="#{person.id}"/>
+                <h:commandButton value="delete student" action="#{person.delete()}"/>
+            </h:panelGrid>
+        </h:form><br></br><br></br>
+        <h:form>
+            <h:panelGrid columns="2">
+                Person By ID: <h:inputText value="#{person.id}"/>
+                <h:commandButton value="Show student" action="#{person.byid}"/>
+                <h:outputText value="#{person.name}"/>
+                <h:outputText value="#{person.country}"/>
+            </h:panelGrid><br></br><br></br>
+        </h:form>
+        <h:form>
+            <h:panelGrid columns="2">
+                Person ID: <h:inputText value="#{student.id}"/><br></br>
+                <h:commandButton value="Show student" action="#{student.getbyid}"/><br></br>
+                <h:inputText value="#{student.name}"/><br></br>
+                <h:inputText value="#{student.department}"/><br></br>
+                <h:commandButton value="Update" action="#{student.update}"/>
+            </h:panelGrid>
+        </h:form>
+        <h:form>
+            <h:panelGrid columns="2">
+                Person ID: <h:inputText value="#{person.id}"/><br></br>
+                <h:commandButton value="Show person" action="#{person.byid}"/><br></br>
+                <h:inputText value="#{person.name}"/><br></br>
+                <h:inputText value="#{person.country}"/><br></br>
+                <h:commandButton value="Update" action="#{person.update()}"/>
+            </h:panelGrid>
+        </h:form>
+  
+   
+	</body>
+	 
+</html>
